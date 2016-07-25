@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="false">
+  <test name="Test" verbose="10">
+    <classes>
+      <class name="com.travelzen.somking.Inland_Air_Ticket_Order"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
