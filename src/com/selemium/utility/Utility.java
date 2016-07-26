@@ -23,8 +23,8 @@ import java.util.concurrent.TimeUnit;
 
 public class Utility {
 
-	public static String airline = System.getProperty("user.dir") + "/BaseInfomation/airline.xls";
-	public static String airport = System.getProperty("user.dir") + "/BaseInfomation/airport.xls";
+	public static String airline = ClassLoader.getSystemResource("BaseInfomation").getPath().substring(1) + "/airline.xls";
+	public static String airport = ClassLoader.getSystemResource("BaseInfomation").getPath().substring(1) + "/airport.xls";
 
 	public static WebElement getElementMethod_xpath(WebDriver webDriver, String xpath) {
 		WebElement webElement = webDriver.findElement(By.xpath(xpath));
@@ -131,38 +131,35 @@ public class Utility {
 			System.out.println("screen shot finished");
 		}
 	}
-	
-	public static boolean waitElementPresenceByXpath(WebDriver driver, int waitTime, String xpath, int type)
-	{
-		WebDriverWait wait =new WebDriverWait(driver, waitTime);
+
+	public static boolean waitElementPresenceByXpath(WebDriver driver, int waitTime, String xpath, int type) {
+		WebDriverWait wait = new WebDriverWait(driver, waitTime);
 		return wait.until(new ExpectedCondition<Boolean>() {
 			@Override
-			public Boolean apply(WebDriver driver)
-			{
+			public Boolean apply(WebDriver driver) {
 				switch (type) {
 				case 0:
-					return driver.findElements(By.xpath(xpath)).size()==0;
+					return driver.findElements(By.xpath(xpath)).size() == 0;
 				case 1:
-					return driver.findElements(By.xpath(xpath)).size()>0;
+					return driver.findElements(By.xpath(xpath)).size() > 0;
 				default:
 					return false;
 				}
 			}
 		});
 	}
-	
-	public static void waitElementPresenceByAttribute(WebDriver driver, int waitTime, String xpath, String attrubite, String value)
-	{
-		WebDriverWait wait =new WebDriverWait(driver, waitTime);
-		//System.out.println(driver.findElement(By.xpath(xpath)).getAttribute(attrubite));
+
+	public static void waitElementPresenceByAttribute(WebDriver driver, int waitTime, String xpath, String attrubite,
+			String value) {
+		WebDriverWait wait = new WebDriverWait(driver, waitTime);
+		// System.out.println(driver.findElement(By.xpath(xpath)).getAttribute(attrubite));
 		wait.until(ExpectedConditions.attributeContains(driver.findElement(By.xpath(xpath)), attrubite, value));
-		//System.out.println(driver.findElement(By.xpath(xpath)).getAttribute(attrubite));
+		// System.out.println(driver.findElement(By.xpath(xpath)).getAttribute(attrubite));
 	}
-	
-	public static void waitURLnavigation(WebDriver driver, int waitTime, String partofURL)
-	{
-		WebDriverWait wait =new WebDriverWait(driver, waitTime);
+
+	public static void waitURLnavigation(WebDriver driver, int waitTime, String partofURL) {
+		WebDriverWait wait = new WebDriverWait(driver, waitTime);
 		wait.until(ExpectedConditions.urlContains(partofURL));
 	}
-	
+
 }

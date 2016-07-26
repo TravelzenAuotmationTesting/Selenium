@@ -14,7 +14,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
 
 import com.selemium.utility.PageInitialize;
 import com.selemium.utility.*;
@@ -70,25 +69,20 @@ public class Inland_Air_Ticket_Order {
 	}
 
 	@BeforeTest
-	public void beforeTest() {
+	public void beforeTest() throws ConfigurationException{
 		
 		try {
-			PropertiesConfiguration config = new PropertiesConfiguration("test.properties");
+			PropertiesConfiguration config = new PropertiesConfiguration(ClassLoader.getSystemResource("test.properties"));
 			operationURL = config.getString("operationOP3URL");
 			operation_username = config.getString("operation_username");
 			operation_password = config.getString("operation_password");
 			
-			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/Driver/chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", ClassLoader.getSystemResource("Driver").getPath().substring(1)+"/chromedriver.exe");
 			
 			driver = new EventFiringWebDriver(new ChromeDriver()).register(new WebDriverListenerRedefine());
 			driver.get(operationURL);
 			pageInit=new PageInitialize(driver);
-			
-			
-				
-		} catch (ConfigurationException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+
 		} finally {
 			if (operationURL == null) {
 				System.out.println("can't get testing URL");
@@ -96,15 +90,12 @@ public class Inland_Air_Ticket_Order {
 		}
 	}
 
+
 	@AfterMethod
 	public void AfterMethod()
 	{
 		Utility.snapshot((TakesScreenshot)driver, "result.png");
 	}
-	
-	@AfterTest
-	public void afterTest() {
-		
-	}
+
 
 }
