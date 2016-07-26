@@ -10,6 +10,7 @@ import org.openqa.selenium.support.How;
 
 import com.data.generation.IssueTicketData;
 import com.page.element.base.OperationTicketBase;
+import com.selemium.utility.Utility;
 
 public class OperationIssueTDetail extends OperationTicketBase {
 
@@ -40,13 +41,7 @@ public class OperationIssueTDetail extends OperationTicketBase {
 	public void completeTicket_click()
 	{
 		completeTicket.click();
-		while(true)
-		{
-			if(driver.getCurrentUrl().contains("searchProcessIssueOrder"))
-			{
-				break;
-			}
-		}
+		Utility.waitURLnavigation(driver, 10, "searchProcessIssueOrder");
 		
 	}
 }

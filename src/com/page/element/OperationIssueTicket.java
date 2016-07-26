@@ -38,8 +38,12 @@ public class OperationIssueTicket extends OperationOrderManagementMenu {
 		orderIDtxt.sendKeys(orderID);
 		queryOrdersbtn.click();
 		
-		if(Utility.waitElementPresenceByXpath(driver, 20, "//div[@id='orderList']/div[@class='k-grid-content']/table/tbody/tr/td", 0))
+		boolean flag=true;
+		
+		while(flag)
 		{
+			flag=driver.findElements(By.xpath("//div[@id='orderList']/div[@class='k-grid-content']/table/tbody/tr/td")).size()!=0 ? false: true;
+			//flag=Utility.waitElementPresenceByXpath(driver, 20, "//div[@id='orderList']/div[@class='k-grid-content']/table/tbody/tr/td", 0);
 			queryOrdersbtn.click();
 		}
 		

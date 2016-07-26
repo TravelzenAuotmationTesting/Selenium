@@ -12,15 +12,12 @@ import org.apache.commons.configuration.PropertiesConfiguration;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 
-import com.page.element.*;
-import com.page.element.login.OperationLogin;
-import com.selemium.utility.Utility;
-import com.selemium.utility.WebDriverListenerRedefine;
+import com.selemium.utility.PageInitialize;
+import com.selemium.utility.*;
 import com.data.generation.*;
 
 //import org.apache.log4j.LogManager;
@@ -32,14 +29,7 @@ public class Inland_Air_Ticket_Order {
 	String operationURL = null;
 	String operation_username = null;
 	String operation_password = null;
-	
-	OperationLogin oLogin = null;
-	OperationWhiteSearchOrder whiteSearchOrder = null;
-	OperationCreateOrder whiteCreateOrder= null;
-	OperationOrderDetail orderDetail= null;
-	OperationOrderQuery  orderQuery= null;
-	OperationIssueTicket issueTicket= null;
-	OperationIssueTDetail issueTDetail= null;
+	PageInitialize pageInit=null;
 	WebDriver driver= null;
 	//static final Logger logger = LogManager.getLogger(Inland_Air_Ticket_Order.class.getName());
 	
@@ -54,27 +44,27 @@ public class Inland_Air_Ticket_Order {
 		List<WhitePassenagerData> passenagerData =new ArrayList<WhitePassenagerData> ();
 		passenagerData.add(new WhitePassenagerData());
 
-		oLogin.setLogindata(new LoginData(operation_username, operation_password));
-		oLogin.loginOperation();
+		pageInit.o_login.setLogindata(new LoginData(operation_username, operation_password));
+		pageInit.o_login.loginOperation();
 	
-		whiteSearchOrder.inlandTicketLink_click();
-		whiteSearchOrder.platformOrderLink_click();
-		whiteSearchOrder.whitePredetermine_click();
-		whiteSearchOrder.whiteDataInput(searchData);
-		whiteSearchOrder.request_click();
-		whiteSearchOrder.firstOrder_click();
+		pageInit.o_whiteSearchOrder.inlandTicketLink_click();
+		pageInit.o_whiteSearchOrder.platformOrderLink_click();
+		pageInit.o_whiteSearchOrder.whitePredetermine_click();
+		pageInit.o_whiteSearchOrder.whiteDataInput(searchData);
+		pageInit.o_whiteSearchOrder.request_click();
+		pageInit.o_whiteSearchOrder.firstOrder_click();
 		
-		whiteCreateOrder.passenageInfomationInput(passenagerData);
-		whiteCreateOrder.createOrder_click();
+		pageInit.o_whiteCreateOrder.passenageInfomationInput(passenagerData);
+		pageInit.o_whiteCreateOrder.createOrder_click();
 		
-		String orderID= orderDetail.getOrderID();
-		orderDetail.applyTicketbtn_click();
-		orderQuery.issueTicketlink_click();
-		issueTicket.orderQuery(orderID);
-		issueTDetail.fillinData(new IssueTicketData());
-		issueTDetail.completeTicket_click();
-		orderQuery.orderManagementLink_click();
-		Assert.assertEquals(true, orderQuery.orderStatusQuery(orderID));
+		String orderID= pageInit.o_orderDetail.getOrderID();
+		pageInit.o_orderDetail.applyTicketbtn_click();
+		pageInit.o_orderQuery.issueTicketlink_click();
+		pageInit.o_issueTicket.orderQuery(orderID);
+		pageInit.o_issueTDetail.fillinData(new IssueTicketData());
+		pageInit.o_issueTDetail.completeTicket_click();
+		pageInit.o_orderQuery.orderManagementLink_click();
+		Assert.assertEquals(true, pageInit.o_orderQuery.orderStatusQuery(orderID));
 		//logger.info("test  "+orderID);
 		
 	}
@@ -92,14 +82,9 @@ public class Inland_Air_Ticket_Order {
 			
 			driver = new EventFiringWebDriver(new ChromeDriver()).register(new WebDriverListenerRedefine());
 			driver.get(operationURL);
+			pageInit=new PageInitialize(driver);
 			
-			oLogin = PageFactory.initElements(driver, OperationLogin.class);
-			whiteSearchOrder = PageFactory.initElements(driver, OperationWhiteSearchOrder.class);
-			whiteCreateOrder=PageFactory.initElements(driver, OperationCreateOrder.class);
-			orderDetail=PageFactory.initElements(driver, OperationOrderDetail.class);
-			orderQuery=PageFactory.initElements(driver, OperationOrderQuery.class);
-			issueTicket=PageFactory.initElements(driver, OperationIssueTicket.class);
-			issueTDetail=PageFactory.initElements(driver, OperationIssueTDetail.class);
+			
 				
 		} catch (ConfigurationException e) {
 			// TODO Auto-generated catch block

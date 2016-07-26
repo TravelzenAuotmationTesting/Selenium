@@ -154,9 +154,15 @@ public class Utility {
 	public static void waitElementPresenceByAttribute(WebDriver driver, int waitTime, String xpath, String attrubite, String value)
 	{
 		WebDriverWait wait =new WebDriverWait(driver, waitTime);
-		System.out.println(driver.findElement(By.xpath(xpath)).getAttribute(attrubite));
+		//System.out.println(driver.findElement(By.xpath(xpath)).getAttribute(attrubite));
 		wait.until(ExpectedConditions.attributeContains(driver.findElement(By.xpath(xpath)), attrubite, value));
-		System.out.println(driver.findElement(By.xpath(xpath)).getAttribute(attrubite));
+		//System.out.println(driver.findElement(By.xpath(xpath)).getAttribute(attrubite));
+	}
+	
+	public static void waitURLnavigation(WebDriver driver, int waitTime, String partofURL)
+	{
+		WebDriverWait wait =new WebDriverWait(driver, waitTime);
+		wait.until(ExpectedConditions.urlContains(partofURL));
 	}
 	
 }
