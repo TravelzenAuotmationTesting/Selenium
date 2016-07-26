@@ -1,0 +1,77 @@
+2016-07-26 09:56:22  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //input[@type='text' and @name='username']84
+2016-07-26 09:56:22  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //input[@type='password' and @name='password']84
+2016-07-26 09:56:22  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //input[@type='submit' and @name='login']84
+2016-07-26 09:56:22  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.linkText: 国内机票84
+2016-07-26 09:56:23  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.linkText: 平台建单84
+2016-07-26 09:56:23  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //button[3]84
+2016-07-26 09:56:24  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //input[@id='id_startCity']84
+2016-07-26 09:56:24  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //input[@id='id_endCity']84
+2016-07-26 09:56:24  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //input[@id='depd']84
+2016-07-26 09:56:24  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //input[@id='arrd']84
+2016-07-26 09:56:24  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //input[@name='flightCompanySearch_input']84
+2016-07-26 09:56:24  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //input[@id='customerName']84
+2016-07-26 09:56:24  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: (//input[@name='singleSearch'])[1]84
+2016-07-26 09:56:24  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //input[@id='id_startCity']84
+2016-07-26 09:56:25  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //ul[@id='id_startCity_listbox']/li/span84
+2016-07-26 09:56:25  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //input[@id='id_endCity']84
+2016-07-26 09:56:25  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //ul[@id='id_endCity_listbox']/li/span84
+2016-07-26 09:56:25  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //input[@name='flightCompanySearch_input']84
+2016-07-26 09:56:25  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //ul[@aria-live='polite']/li/span84
+2016-07-26 09:56:25  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //input[@id='depd']84
+2016-07-26 09:56:25  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: (//span[@class='k-input'])[1]84
+2016-07-26 09:56:25  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: (//span[@class='k-input'])[2]84
+2016-07-26 09:56:26  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //input[@id='customerName']84
+2016-07-26 09:56:26  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.className: page-title84
+2016-07-26 09:56:26  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //button[@id='submitSearchRequirmentForm']84
+2016-07-26 09:56:26  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //div[@class='lightbox']84
+2016-07-26 09:56:26  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //div[@class='lightbox']84
+2016-07-26 09:56:27  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //div[@class='lightbox']84
+2016-07-26 09:56:27  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //tr[@class='data-row form_list_0']/td/a[@class='btns btn-order']84
+2016-07-26 09:56:27  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //input[@class='passengerName' and @data-required-msg]84
+2016-07-26 09:56:28  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //input[@class='passengerName' and @data-required-msg]84
+2016-07-26 09:56:28  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //span[@class='k-widget k-dropdown k-header gender']/span/span[@class='k-input']84
+2016-07-26 09:56:28  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: (//input[@class='documentNo'])[position()<last()]84
+2016-07-26 09:56:28  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //input[@class='mobileNo' and @data-pattern-msg]84
+2016-07-26 09:56:29  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //input[@class='passengerName' and @data-required-msg]84
+2016-07-26 09:56:29  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //input[@name='orderBO.orderContactBO.telephone']84
+2016-07-26 09:56:29  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //div[@id='price_info_grid']/div84
+2016-07-26 09:56:30  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //input[@type='submit']84
+2016-07-26 09:56:30  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //em[@id='id']84
+2016-07-26 09:56:40  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //input[@id='apply_issue']84
+2016-07-26 09:56:40  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.linkText: 立即跳转84
+2016-07-26 09:56:45  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //strong[@id='watingForIssueCount']84
+2016-07-26 09:56:46  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //input[@id='flightOrderItemId']84
+2016-07-26 09:56:46  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //a[@id='queryOrders']84
+2016-07-26 09:56:46  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //div[@id='orderList']/div[@class='k-grid-content']/table/tbody/tr/td84
+2016-07-26 09:56:49  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //a[@id='queryOrders']84
+2016-07-26 09:56:49  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //div[@id='orderList']/div[@class='k-grid-content']/table/tbody/tr/td84
+2016-07-26 09:56:49  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //div[@id='orderList']/div[@class='k-grid-content']/table/tbody/tr/td84
+2016-07-26 09:56:49  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //div[@id='orderList']/div[@class='k-grid-content']/table/tbody/tr/td84
+2016-07-26 09:56:49  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //div[@id='orderList']/div[@class='k-grid-content']/table/tbody/tr/td84
+2016-07-26 09:56:49  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //div[@id='orderList']/div[@class='k-grid-content']/table/tbody/tr/td84
+2016-07-26 09:56:49  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //div[@id='orderList']/div[@class='k-grid-content']/table/tbody/tr/td84
+2016-07-26 09:56:49  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //div[@id='orderList']/div[@class='k-grid-content']/table/tbody/tr/td84
+2016-07-26 09:56:49  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //div[@id='orderList']/div[@class='k-grid-content']/table/tbody/tr/td84
+2016-07-26 09:56:49  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //div[@id='orderList']/div[@class='k-grid-content']/table/tbody/tr/td84
+2016-07-26 09:56:49  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //div[@id='orderList']/div[@class='k-grid-content']/table/tbody/tr/td84
+2016-07-26 09:56:49  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //div[@id='orderList']/div[@class='k-grid-content']/table/tbody/tr/td84
+2016-07-26 09:56:49  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //div[@id='orderList']/div[@class='k-grid-content']/table/tbody/tr/td84
+2016-07-26 09:56:49  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //div[@id='orderList']/div[@class='k-grid-content']/table/tbody/tr/td84
+2016-07-26 09:56:49  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //div[@id='orderList']/div[@class='k-grid-content']/table/tbody/tr/td84
+2016-07-26 09:56:50  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //div[@id='orderList']/div[@class='k-grid-content']/table/tbody/tr/td84
+2016-07-26 09:56:50  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //div[@id='orderList']/div[@class='k-grid-content']/table/tbody/tr/td84
+2016-07-26 09:56:50  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //div[@id='orderList']/div[@class='k-grid-content']/table/tbody/tr/td84
+2016-07-26 09:56:50  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //div[@id='orderList']/div[@class='k-grid-content']/table/tbody/tr/td84
+2016-07-26 09:56:50  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //div[@id='orderList']/div[@class='k-grid-content']/table/tbody/tr/td84
+2016-07-26 09:56:50  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //div[@id='orderList']/div[@class='k-grid-content']/table/tbody/tr/td84
+2016-07-26 09:56:50  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //div[@id='orderList']/div[@class='k-grid-content']/table/tbody/tr/td84
+2016-07-26 09:56:50  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.linkText: 受理84
+2016-07-26 09:56:51  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //span[@class='check_ticket_item']84
+2016-07-26 09:56:51  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //input[@value='BSP']84
+2016-07-26 09:56:51  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //input[@class='ticketNo ticket-can-copy-ticketNo']84
+2016-07-26 09:56:51  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //input[@id='complete_issue']84
+2016-07-26 09:56:54  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.linkText: 订单管理84
+2016-07-26 09:56:55  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //input[@name='flightOrderItemId']84
+2016-07-26 09:56:55  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //a[@id='queryOrders']84
+2016-07-26 09:56:55  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //div[@id='orderList']/div[@class='k-grid-content']/table/tbody/tr84
+2016-07-26 09:56:55  [com.selemium.utility.WebDriverListenerRedefine] (main:) By.xpath: //div[@id='orderList']/div[@class='k-grid-content']/table/tbody/tr84

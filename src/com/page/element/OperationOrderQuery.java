@@ -33,6 +33,7 @@ public class OperationOrderQuery extends OperationOrderManagementMenu {
 		
 		WebDriverWait wait =new WebDriverWait(driver, 10);
 		wait.until(new ExpectedCondition<Boolean>() {
+			@Override
 			public Boolean apply(WebDriver driver)
 			{
 				return orderList.size()>0;

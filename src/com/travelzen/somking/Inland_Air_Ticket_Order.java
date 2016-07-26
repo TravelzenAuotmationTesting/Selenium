@@ -48,7 +48,7 @@ public class Inland_Air_Ticket_Order {
 	public void Inland_Air_SingleTrip_Operation() {
 		
 		
-		//DOMConfigurator.configure("src\\log4j.xml");
+		//Auto loader DOMConfigurator.configure("src\\log4j.xml");
 		WhiteSearchOrderData searchData= new WhiteSearchOrderData();
 		searchData.singleTrip=1;
 		List<WhitePassenagerData> passenagerData =new ArrayList<WhitePassenagerData> ();

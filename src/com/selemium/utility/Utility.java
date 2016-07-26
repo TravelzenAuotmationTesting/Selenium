@@ -136,6 +136,7 @@ public class Utility {
 	{
 		WebDriverWait wait =new WebDriverWait(driver, waitTime);
 		return wait.until(new ExpectedCondition<Boolean>() {
+			@Override
 			public Boolean apply(WebDriver driver)
 			{
 				switch (type) {
@@ -158,6 +159,4 @@ public class Utility {
 		System.out.println(driver.findElement(By.xpath(xpath)).getAttribute(attrubite));
 	}
 	
-	
-
 }

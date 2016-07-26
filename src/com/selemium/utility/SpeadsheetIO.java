@@ -13,6 +13,8 @@ import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.poifs.filesystem.POIFSFileSystem;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.DateUtil;
 
 /**
  * 操作Excel表格的功能类
@@ -126,16 +128,16 @@ public class SpeadsheetIO {
 	private String getStringCellValue(HSSFCell cell) {
 		String strCell = "";
 		switch (cell.getCellType()) {
-		case HSSFCell.CELL_TYPE_STRING:
+		case Cell.CELL_TYPE_STRING:
 			strCell = cell.getStringCellValue();
 			break;
-		case HSSFCell.CELL_TYPE_NUMERIC:
+		case Cell.CELL_TYPE_NUMERIC:
 			strCell = String.valueOf(cell.getNumericCellValue());
 			break;
-		case HSSFCell.CELL_TYPE_BOOLEAN:
+		case Cell.CELL_TYPE_BOOLEAN:
 			strCell = String.valueOf(cell.getBooleanCellValue());
 			break;
-		case HSSFCell.CELL_TYPE_BLANK:
+		case Cell.CELL_TYPE_BLANK:
 			strCell = "";
 			break;
 		default:
@@ -162,13 +164,13 @@ public class SpeadsheetIO {
 		String result = "";
 		try {
 			int cellType = cell.getCellType();
-			if (cellType == HSSFCell.CELL_TYPE_NUMERIC) {
+			if (cellType == Cell.CELL_TYPE_NUMERIC) {
 				Date date = cell.getDateCellValue();
 				result = (date.getYear() + 1900) + "-" + (date.getMonth() + 1) + "-" + date.getDate();
-			} else if (cellType == HSSFCell.CELL_TYPE_STRING) {
+			} else if (cellType == Cell.CELL_TYPE_STRING) {
 				String date = getStringCellValue(cell);
 				result = date.replaceAll("[年月]", "-").replace("日", "").trim();
-			} else if (cellType == HSSFCell.CELL_TYPE_BLANK) {
+			} else if (cellType == Cell.CELL_TYPE_BLANK) {
 				result = "";
 			}
 		} catch (Exception e) {
@@ -190,10 +192,10 @@ public class SpeadsheetIO {
 			// 判断当前Cell的Type
 			switch (cell.getCellType()) {
 			// 如果当前Cell的Type为NUMERIC
-			case HSSFCell.CELL_TYPE_NUMERIC:
-			case HSSFCell.CELL_TYPE_FORMULA: {
+			case Cell.CELL_TYPE_NUMERIC:
+			case Cell.CELL_TYPE_FORMULA: {
 				// 判断当前的cell是否为Date
-				if (HSSFDateUtil.isCellDateFormatted(cell)) {
+				if (DateUtil.isCellDateFormatted(cell)) {
 					// 如果是Date类型则，转化为Data格式
 
 					// 方法1：这样子的data格式是带时分秒的：2011-10-12 0:00:00
@@ -213,7 +215,7 @@ public class SpeadsheetIO {
 				break;
 			}
 			// 如果当前Cell的Type为STRIN
-			case HSSFCell.CELL_TYPE_STRING:
+			case Cell.CELL_TYPE_STRING:
 				// 取得当前的Cell字符串
 				cellvalue = cell.getRichStringCellValue().getString();
 				break;

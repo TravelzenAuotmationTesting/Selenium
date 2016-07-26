@@ -8,13 +8,13 @@ import java.util.Date;
 import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.events.WebDriverEventListener;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 
@@ -25,7 +25,7 @@ import org.openqa.selenium.support.events.WebDriverEventListener;
  */
 public class WebDriverListenerRedefine implements WebDriverEventListener {
 
-	private Log logger = LogFactory.getLog(this.getClass());
+	private Logger logger = LoggerFactory.getLogger(this.getClass());
 	private SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
 	
 	public By lastFindBy;
@@ -81,7 +81,7 @@ public class WebDriverListenerRedefine implements WebDriverEventListener {
 	@Override
 	public void beforeFindBy(By by, WebElement element, WebDriver driver) {
 		// TODO Auto-generated method stub
-		logger.info(by);
+		logger.info(by.toString());
 		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 	}
 
@@ -132,10 +132,10 @@ public class WebDriverListenerRedefine implements WebDriverEventListener {
 		// TODO Auto-generated method stub
 		if(throwable.getClass().equals(NoSuchElementException.class))
 		{
-			logger.error("WebDriver error: Element not found "+lastFindBy);
+			logger.error("WebDriver error: Element not found {}",lastFindBy);
 		}
 		else{
-			logger.error("WebDriver error:", throwable);
+			logger.error("WebDriver error: {}", throwable);
 		}
 		Utility.snapshot((TakesScreenshot)driver,formatter.format(new Date())+".jpg");
 		
