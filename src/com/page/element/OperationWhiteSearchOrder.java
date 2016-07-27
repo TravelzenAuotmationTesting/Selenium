@@ -116,7 +116,7 @@ public class OperationWhiteSearchOrder extends OperationTicketBase {
 
 	public void request_click() {
 		serachbtn.click();
-		Utility.waitElementPresenceByAttribute(driver, 10, "//div[@class='lightbox']", "Style", "none");
+		Utility.waitElementPresenceByAttribute(driver, 20, "//div[@class='lightbox']", "Style", "none");
 		orderList = Utility.getPassBackData(driver,
 				"//tr[@class='data-row form_list_0']/td/a[@class='btns btn-order']");
 	}

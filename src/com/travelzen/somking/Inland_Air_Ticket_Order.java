@@ -3,6 +3,7 @@ package com.travelzen.somking;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -91,7 +92,7 @@ public class Inland_Air_Ticket_Order {
 	}
 
 
-	@AfterMethod
+	@AfterTest
 	public void AfterMethod()
 	{
 		Utility.snapshot((TakesScreenshot)driver, "result.png");
