@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="TravelzenTestingGit" basedir=".">
+	<property name="src" value="src" />
+	<property name="dest" value="bin" />
+	<target name="clean">
+		<delete dir="${dest}" />
+	</target>
+	<target name="compile" depends="clean">
+		<mkdir dir="bin" />
+		<javac srcdir="src" destdir="bin" includeantruntime='on'>
+			<classpath>
+				<fileset dir="libs">
+					<include name="*.jar" />
+				</fileset>
+			</classpath>
+			<compilerarg line="-encoding GBK" />
+		</javac>
+	</target>
+	<target name="copy">
+		<copy todir="${dest}">
+			<fileset dir="configuration" />
+		</copy>
+	</target>
+</project>

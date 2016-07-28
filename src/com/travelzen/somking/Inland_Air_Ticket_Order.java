@@ -2,7 +2,6 @@ package com.travelzen.somking;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 
 import java.util.ArrayList;
@@ -29,35 +28,34 @@ public class Inland_Air_Ticket_Order {
 	String operationURL = null;
 	String operation_username = null;
 	String operation_password = null;
-	PageInitialize pageInit=null;
-	WebDriver driver= null;
-	//static final Logger logger = LogManager.getLogger(Inland_Air_Ticket_Order.class.getName());
-	
+	PageInitialize pageInit = null;
+	WebDriver driver = null;
+	// static final Logger logger =
+	// LogManager.getLogger(Inland_Air_Ticket_Order.class.getName());
 
-	@Test
+	@Test(groups = ("somking_test"))
 	public void Inland_Air_SingleTrip_Operation() {
-		
-		
-		//Auto loader DOMConfigurator.configure("src\\log4j.xml");
-		WhiteSearchOrderData searchData= new WhiteSearchOrderData();
-		searchData.singleTrip=1;
-		List<WhitePassenagerData> passenagerData =new ArrayList<WhitePassenagerData> ();
+
+		// Auto loader DOMConfigurator.configure("src\\log4j.xml");
+		WhiteSearchOrderData searchData = new WhiteSearchOrderData();
+		searchData.singleTrip = 1;
+		List<WhitePassenagerData> passenagerData = new ArrayList<WhitePassenagerData>();
 		passenagerData.add(new WhitePassenagerData());
 
 		pageInit.o_login.setLogindata(new LoginData(operation_username, operation_password));
 		pageInit.o_login.loginOperation();
-	
+
 		pageInit.o_whiteSearchOrder.inlandTicketLink_click();
 		pageInit.o_whiteSearchOrder.platformOrderLink_click();
 		pageInit.o_whiteSearchOrder.whitePredetermine_click();
 		pageInit.o_whiteSearchOrder.whiteDataInput(searchData);
 		pageInit.o_whiteSearchOrder.request_click();
 		pageInit.o_whiteSearchOrder.firstOrder_click();
-		
+
 		pageInit.o_whiteCreateOrder.passenageInfomationInput(passenagerData);
 		pageInit.o_whiteCreateOrder.createOrder_click();
-		
-		String orderID= pageInit.o_orderDetail.getOrderID();
+
+		String orderID = pageInit.o_orderDetail.getOrderID();
 		pageInit.o_orderDetail.applyTicketbtn_click();
 		pageInit.o_orderQuery.issueTicketlink_click();
 		pageInit.o_issueTicket.orderQuery(orderID);
@@ -65,24 +63,26 @@ public class Inland_Air_Ticket_Order {
 		pageInit.o_issueTDetail.completeTicket_click();
 		pageInit.o_orderQuery.orderManagementLink_click();
 		Assert.assertEquals(true, pageInit.o_orderQuery.orderStatusQuery(orderID));
-		//logger.info("test  "+orderID);
-		
+		// logger.info("test "+orderID);
+
 	}
 
 	@BeforeTest
-	public void beforeTest() throws ConfigurationException{
-		
+	public void beforeTest() throws ConfigurationException {
+
 		try {
-			PropertiesConfiguration config = new PropertiesConfiguration(ClassLoader.getSystemResource("test.properties"));
+			PropertiesConfiguration config = new PropertiesConfiguration(
+					ClassLoader.getSystemResource("test.properties"));
 			operationURL = config.getString("operationOP3URL");
 			operation_username = config.getString("operation_username");
 			operation_password = config.getString("operation_password");
-			
-			System.setProperty("webdriver.chrome.driver", ClassLoader.getSystemResource("Driver").getPath().substring(1)+"/chromedriver.exe");
-			
+
+			System.setProperty("webdriver.chrome.driver",
+					ClassLoader.getSystemResource("Driver").getPath().substring(1) + "/chromedriver.exe");
+
 			driver = new EventFiringWebDriver(new ChromeDriver()).register(new WebDriverListenerRedefine());
 			driver.get(operationURL);
-			pageInit=new PageInitialize(driver);
+			pageInit = new PageInitialize(driver);
 
 		} finally {
 			if (operationURL == null) {
@@ -91,12 +91,10 @@ public class Inland_Air_Ticket_Order {
 		}
 	}
 
-
 	@AfterTest
-	public void AfterMethod()
-	{
-		Utility.snapshot((TakesScreenshot)driver, "result.png");
+	public void AfterMethod() {
+		Utility.snapshot((TakesScreenshot) driver, "result.png");
+		driver.quit();
 	}
-
 
 }
