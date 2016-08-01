@@ -15,6 +15,7 @@ public class PageInitialize {
 	public OperationOrderQuery  o_orderQuery;
 	public OperationIssueTicket o_issueTicket;
 	public OperationIssueTDetail o_issueTDetail;
+	public OperationBlackSearchOrder o_blackSearchOrder;
 	/**
 	 * @param login
 	 * @param whiteSearchOrder
@@ -32,6 +33,7 @@ public class PageInitialize {
 		this.o_orderQuery = PageFactory.initElements(driver, OperationOrderQuery.class);
 		this.o_issueTicket = PageFactory.initElements(driver, OperationIssueTicket.class);
 		this.o_issueTDetail = PageFactory.initElements(driver, OperationIssueTDetail.class);
+		this.o_blackSearchOrder=PageFactory.initElements(driver, OperationBlackSearchOrder.class);
 	}
 	
 	

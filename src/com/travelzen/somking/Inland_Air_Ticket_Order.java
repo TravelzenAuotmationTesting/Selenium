@@ -20,10 +20,6 @@ import com.selemium.utility.PageInitialize;
 import com.selemium.utility.*;
 import com.data.generation.*;
 
-//import org.apache.log4j.LogManager;
-//import org.apache.log4j.Logger;
-//import org.apache.log4j.xml.DOMConfigurator;
-
 public class Inland_Air_Ticket_Order {
 
 	String operationURL = null;
@@ -31,8 +27,7 @@ public class Inland_Air_Ticket_Order {
 	String operation_password = null;
 	PageInitialize pageInit = null;
 	WebDriver driver = null;
-	// static final Logger logger =
-	// LogManager.getLogger(Inland_Air_Ticket_Order.class.getName());
+	String PNR=null;
 
 	@Test(groups = ("somking_test"))
 	public void Inland_Air_SingleTrip_Operation() {
@@ -67,6 +62,16 @@ public class Inland_Air_Ticket_Order {
 		// logger.info("test "+orderID);
 
 	}
+	
+//	@Test(groups= ("somking_test"))
+//	public void Inland_Air_CreateOrderByBlack_Operation() {
+//		pageInit.o_whiteSearchOrder.inlandTicketLink_click();
+//		pageInit.o_whiteSearchOrder.platformOrderLink_click();
+//		pageInit.o_whiteSearchOrder.blackPredetermine_click();
+//		pageInit.o_blackSearchOrder.adultBlackDataInput("CW", PNR, null);
+//		pageInit.o_blackSearchOrder.adultPnrCodeCreateOrderBtn_click();
+//		
+//	}
 
 	@BeforeTest
 	public void beforeTest() throws ConfigurationException {
@@ -77,6 +82,7 @@ public class Inland_Air_Ticket_Order {
 			operationURL = config.getString("operationOP3URL");
 			operation_username = config.getString("operation_username");
 			operation_password = config.getString("operation_password");
+			PNR=config.getString("JZEXXV");
 
 			System.setProperty("webdriver.chrome.driver",
 					ClassLoader.getSystemResource("Driver").getPath().substring(1) + "/chromedriver.exe");
