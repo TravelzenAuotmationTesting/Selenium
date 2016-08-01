@@ -1,24 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="TravelzenTestingGit" basedir=".">
+<project name="TravelzenTestingGit" default="testng" basedir=".">
 	<property name="src" value="src" />
 	<property name="dest" value="bin" />
+	<property name="3rd.lib.dir" value="libs" />
+	<property name="testng.file" value="src/testng.xml" />
+	<property name="testng.output.dir" value="test-output" />
+	<taskdef name="testng" classname="org.testng.TestNGAntTask">
+		<classpath>
+			<pathelement location="libs/testng-6.9.9.jar" />
+		</classpath>
+	</taskdef>
+
 	<target name="clean">
 		<delete dir="${dest}" />
 	</target>
 	<target name="compile" depends="clean">
 		<mkdir dir="bin" />
-		<javac srcdir="src" destdir="bin" includeantruntime='on'>
+		<javac srcdir="src" destdir="bin" debug="true" includeantruntime='on'>
 			<classpath>
-				<fileset dir="libs">
+				<fileset dir="${3rd.lib.dir}">
 					<include name="*.jar" />
 				</fileset>
 			</classpath>
 			<compilerarg line="-encoding GBK" />
 		</javac>
 	</target>
-	<target name="copy">
+
+	<target name="copy" depends="compile">
 		<copy todir="${dest}">
 			<fileset dir="configuration" />
 		</copy>
+	</target>
+
+	<path id="classes">
+		<fileset dir="${3rd.lib.dir}" includes="*.jar" />
+		<pathelement location="${dest}" />
+	</path>
+
+	<target name="testng" depends="copy">
+		<testng outputdir="${testng.output.dir}" classpathref="classes" delegateCommandSystemProperties="true">
+			<jvmarg value="-Dfile.encoding=UTF-8" />
+			<xmlfileset dir="." includes="${testng.file}" />
+		</testng>
 	</target>
 </project>

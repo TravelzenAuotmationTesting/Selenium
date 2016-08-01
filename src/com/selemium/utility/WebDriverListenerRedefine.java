@@ -138,7 +138,6 @@ public class WebDriverListenerRedefine implements WebDriverEventListener {
 			logger.error("WebDriver error: {}", throwable);
 		}
 		Utility.snapshot((TakesScreenshot)driver,formatter.format(new Date())+".jpg");
-		
 	}
 
 }
