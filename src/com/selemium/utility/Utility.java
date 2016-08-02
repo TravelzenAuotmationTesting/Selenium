@@ -23,8 +23,10 @@ import java.util.concurrent.TimeUnit;
 
 public class Utility {
 
-	public static String airline = ClassLoader.getSystemResource("BaseInfomation").getPath().substring(1) + "/airline.xls";
-	public static String airport = ClassLoader.getSystemResource("BaseInfomation").getPath().substring(1) + "/airport.xls";
+	public static String airline = ClassLoader.getSystemResource("BaseInfomation").getPath().substring(1)
+			+ "/airline.xls";
+	public static String airport = ClassLoader.getSystemResource("BaseInfomation").getPath().substring(1)
+			+ "/airport.xls";
 
 	public static WebElement getElementMethod_xpath(WebDriver webDriver, String xpath) {
 		WebElement webElement = webDriver.findElement(By.xpath(xpath));
@@ -36,8 +38,8 @@ public class Utility {
 		js.executeScript("arguments[0]." + attribute + "='" + value + "'", element);
 	}
 
-	public static void selectDropDownList(WebDriver driver, String xpath, String code, String speadsheetName) {
-
+	public static void selectDropDownListPerSpreadSheet(WebDriver driver, String xpath, String code,
+			String speadsheetName) {
 		SpeadsheetIO speadsheet = new SpeadsheetIO();
 		InputStream is;
 		String name = "";
@@ -48,11 +50,24 @@ public class Utility {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		selectDropDownList(driver, xpath, name);
+	}
+
+	public static void selectDropDownList(WebDriver driver, String xpath, String content) {
 
 		List<WebElement> elements = getPassBackData(driver, xpath);
 
 		for (WebElement webElement : elements) {
-			if (webElement.getText().equals(name) || webElement.getText().equals(code)) {
+
+			String webContent = null;
+			if (webElement.getText().matches("\\(.*\\)")) {
+
+				webContent = webElement.getText().substring(1, webElement.getText().length() - 1);
+			} else {
+				webContent = webElement.getText();
+			}
+
+			if (webContent.equals(content)) {
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				webElement.click();
 				break;
