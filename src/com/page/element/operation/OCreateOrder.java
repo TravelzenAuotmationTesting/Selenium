@@ -1,4 +1,4 @@
-package com.page.element;
+package com.page.element.operation;
 
 import java.util.List;
 
@@ -13,7 +13,7 @@ import com.data.generation.WhitePassenagerData;
 import com.page.element.base.HomeBase;
 import com.selemium.utility.Utility;
 
-public class OperationCreateOrder extends HomeBase {
+public class OCreateOrder extends HomeBase {
 
 	
 	@FindBy(how=How.XPATH,xpath="//input[@name='orderBO.orderContactBO.telephone']")
@@ -49,7 +49,7 @@ public class OperationCreateOrder extends HomeBase {
 //	@FindBy(how=How.XPATH,xpath="//td[@data-handler='selectDay']/a")
 //	public Select daySelector;
 	
-	public OperationCreateOrder(WebDriver driver) {
+	public OCreateOrder(WebDriver driver) {
 		super(driver);
 		// TODO Auto-generated constructor stub
 	}

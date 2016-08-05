@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Suppliers>
+	<Supplier id="57875d29e4b0be73f6961dc9">
+		<username>yuqingwang</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="53ba6240e4b01e362629b196">
+		<username>wfsue01</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="53faa0b3e4b00a56ed121038">
+		<username>huchanghui</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="543b404ae4b042bf4c5f06cd">
+		<username>wxfprovider</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="544f52fae4b02c106eee153d">
+		<username>qff123</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="54571a6ee4b0fcedeec04b8e">
+		<username>zhaosy</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="545880a2e4b0fcedeec04d9e">
+		<username>huhui</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="54856206e4b0e5d0ed35cd08">
+		<username>chengrongrong</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="54b78ac4e4b004ed46b9662d">
+		<username>wulili</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="54d9c42de4b09ee8c85fc19c">
+		<username>wangqiqi</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="552b45bce4b020e21058e756">
+		<username>huiqing</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="5530adc4e4b09b8ecde21ede">
+		<username>luoxuhongop3g</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="55554e33e4b015a8595edd4c">
+		<username>gyswenhui</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="5581224ce4b03c597ba704e8">
+		<username>yidongrong</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="559388b2e4b0840ed5d3de06">
+		<username>zhaoyan</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="55cc6585e4b0391eeeb89543">
+		<username>weilangjie</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="54f5438ae4b047d5410aaf7d">
+		<username>shangboping</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="55f014dde4b0b822972b9e80">
+		<username>shijie99</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="55f79025e4b0b822972ba272">
+		<username>zhaoyanyan</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="566f757ee4b0b968c0c795f5">
+		<username>gongying1</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="568b35b3e4b01511c7e42668">
+		<username>zyuan</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="574e8875e4b003cb653c01a5">
+		<username>ljw2</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="5661085ae4b05853d621a82a">
+		<username>wull1</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="56610965e4b05853d621a831">
+		<username>wull2</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="566109f7e4b05853d621a839">
+		<username>wull3</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="56610a70e4b05853d621a846">
+		<username>wull4</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="56610ae6e4b05853d621a84c">
+		<username>wull5</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="56610bc1e4b05853d621a857">
+		<username>wull6</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="566fab26e4b0b968c0c79676">
+		<username>gongying2</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="566fc260e4b0b968c0c796ba">
+		<username>gongying3</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="5670c16de4b0b968c0c79776">
+		<username>gongying1216</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="56721502e4b0b968c0c79952">
+		<username>gongying1217</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="568e25f8e4b01511c7e42bcd">
+		<username>Galileo</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="569c4213e4b0b641589b5c07">
+		<username>gongying0115</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="56d3b5a0e4b0694c588207bc">
+		<username>EasternAirlines</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="56d64368e4b0694c588209f1">
+		<username>zyop3</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="56dd23fbe4b0fd0cdcc581c4">
+		<username>lengye</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="56e79f8ee4b0fd0cdcc58747">
+		<username>yuanyuan</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="568b35b3e4b01511c7e42668">
+		<username>133</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="56fa5471e4b0750e318f68f3">
+		<username>yuanrun</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="56fcb73be4b09149849f1abf">
+		<username>lengye3</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="5710510be4b067da1374a9a2">
+		<username>liuwang</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="5710817de4b067da1374a9d2">
+		<username>yucun1012</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="5728410fe4b0fb8c8d8521e6">
+		<username>fuhui1021</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="572995a8e4b0fb8c8d852287">
+		<username>dddd</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="572b1a87e4b002429bac03d6">
+		<username>EasternB2C</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="5745689ee4b0ad536c33b7c5">
+		<username>wangchuanxin</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="57611d48e4b02df10587e461">
+		<username>zhanglili</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="57674277e4b02df10587e696">
+		<username>jichongmeng</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="5770899fe4b02df10587ea38">
+		<username>zhaosy1</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="577a42d4e4b02df10587f025">
+		<username>sunxf</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="577b4fb3e4b02df10587f0d3">
+		<username>GDCRGP</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="577b502fe4b02df10587f0d7">
+		<username>ATBGP</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="577dca8ee4b02df10587f31d">
+		<username>qianzhengdb</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="577dcb07e4b02df10587f320">
+		<username>qianzhengzq</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="577f1d32e4b02df10587f44a">
+		<username>gjgndb</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="577f1d9ae4b02df10587f450">
+		<username>gjgnzq</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="578c30b3e4b0d1d87dcd03b8">
+		<username>zhangwx</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="57875d29e4b0be73f6961dc9">
+		<username>yuqingwang</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="578dbb0ae4b0d1d87dcd0662">
+		<username>yangkun</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="57997acee4b077f767b97a6c">
+		<username>yujunli</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="579eb61ee4b09efb177d9b15">
+		<username>coco123</username>
+		<password>Abc12345</password>
+	</Supplier>
+	<Supplier id="56384874e4b090049122ee0e">
+		<username>zhyuan</username>
+		<password>Abc12345</password>
+	</Supplier>
+</Suppliers>

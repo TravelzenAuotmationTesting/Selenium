@@ -1,4 +1,4 @@
-package com.page.element;
+package com.page.element.operation;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,7 +8,7 @@ import org.openqa.selenium.support.How;
 import com.page.element.base.OperationTicketBase;
 import com.selemium.utility.Utility;
 
-public class OperationBlackSearchOrder extends OperationTicketBase {
+public class OBlackSearchOrder extends OperationTicketBase {
 
 	@FindBy(how = How.XPATH, xpath = "//input[@id='customerName']")
 	public WebElement customerNameTxt;
@@ -25,7 +25,7 @@ public class OperationBlackSearchOrder extends OperationTicketBase {
 	@FindBy(how = How.XPATH, xpath = "(//button[@name='auth_submit'])[2]")
 	public WebElement adultPnrTxtBtn;
 
-	public OperationBlackSearchOrder(WebDriver driver) {
+	public OBlackSearchOrder(WebDriver driver) {
 		super(driver);
 		// TODO Auto-generated constructor stub
 	}

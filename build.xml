@@ -39,7 +39,7 @@
 
 	<target name="testng" depends="copy">
 		<testng outputdir="${testng.output.dir}" classpathref="classes" delegateCommandSystemProperties="true">
-			<jvmarg value="-Dfile.encoding=UTF-8" />
+			<jvmarg value="-Dfile.encoding=GBK" />
 			<xmlfileset dir="." includes="${testng.file}" />
 		</testng>
 	</target>

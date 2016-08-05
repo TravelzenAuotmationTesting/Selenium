@@ -15,7 +15,7 @@ public abstract class LoginBase {
 	@FindBy(how=How.XPATH,xpath="//input[@type='password' and @name='password']")
 	public WebElement passwordtxt;
 	
-	@FindBy(how=How.XPATH,xpath="//input[@type='submit' and @name='login']")
+	@FindBy(how=How.XPATH,xpath="//input[@name='login']")
 	public WebElement loginbtn;
 	
 	

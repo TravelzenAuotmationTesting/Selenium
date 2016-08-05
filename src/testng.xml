@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-	<test name="Test" preserve-order="true">
+	<test verbose="2" name="Inland_Air_Ticket_Order">
 		<classes>
 			<class name="com.travelzen.somking.Inland_Air_Ticket_Order" />
 		</classes>
+		<groups>
+			<run>
+				<exclude name="smokingtest" />
+				<include name="devtest" />
+			</run>
+		</groups>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
+
+
+
+<!-- 
+				<methods>
+					<include name="Inland_Air_CreateOrderByBlack_Operation" />
+					<exclude name="Inland_Air_SingleTrip_Operation" />
+				</methods>
+ -->

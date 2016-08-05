@@ -1,4 +1,4 @@
-package com.page.element;
+package com.page.element.operation;
 
 import java.util.List;
 
@@ -13,7 +13,7 @@ import com.selemium.utility.*;
 
 //import java.lang.reflect.Field;
 
-public class OperationWhiteSearchOrder extends OperationTicketBase {
+public class OWhiteSearchOrder extends OperationTicketBase {
 
 	@FindBy(how = How.XPATH, xpath = "//button[2]")
 	private WebElement blackPredeterminelink;
@@ -59,7 +59,7 @@ public class OperationWhiteSearchOrder extends OperationTicketBase {
 
 	public List<WebElement> orderList;
 
-	public OperationWhiteSearchOrder(WebDriver driver) {
+	public OWhiteSearchOrder(WebDriver driver) {
 		super(driver);
 		// TODO Auto-generated constructor stub
 	}

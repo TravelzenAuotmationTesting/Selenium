@@ -3,6 +3,7 @@ package com.selemium.utility;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -27,11 +28,6 @@ public class Utility {
 			+ "/airline.xls";
 	public static String airport = ClassLoader.getSystemResource("BaseInfomation").getPath().substring(1)
 			+ "/airport.xls";
-
-	public static WebElement getElementMethod_xpath(WebDriver webDriver, String xpath) {
-		WebElement webElement = webDriver.findElement(By.xpath(xpath));
-		return webElement;
-	}
 
 	public static void inputDataByJS(WebDriver driver, WebElement element, String value, String attribute) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -116,14 +112,37 @@ public class Utility {
 		return sb.toString();
 	}
 
-	public static void swtichToOtherTab(WebDriver webDriver, String title) {
-		Set<String> allWindowsId = webDriver.getWindowHandles();
+	public static void swtichToOtherTabByTitle(WebDriver driver, String content) {
+		Set<String> allWindowsId = driver.getWindowHandles();
 		for (String windowId : allWindowsId) {
-			if (!webDriver.switchTo().window(windowId).getTitle().contains(title)) {
-				webDriver.switchTo().window(windowId);
+			if (driver.switchTo().window(windowId).getTitle().contains(content)) {
+				driver.switchTo().window(windowId);
 				break;
 			}
 		}
+	}
+
+	public static void swtichToOtherTabByURL(WebDriver driver, String url) {
+		Set<String> allWindowsId = driver.getWindowHandles();
+		for (String windowId : allWindowsId) {
+			if (driver.switchTo().window(windowId).getCurrentUrl().contains(url)) {
+				driver.switchTo().window(windowId);
+				break;
+			}
+		}
+	}
+	
+	public static void swtichToOtherTabByIndex(WebDriver driver, String index)
+	{
+		String tabIndex = Keys.chord(Keys.CONTROL, index);
+		driver.findElement(By.tagName("body")).sendKeys(tabIndex);
+	}
+
+	public static void openNewTab(WebDriver driver, String href) {
+		String selectLinkOpeninNewTab = Keys.chord(Keys.CONTROL, "t");
+		driver.findElement(By.tagName("body")).sendKeys(selectLinkOpeninNewTab);
+		swtichToOtherTabByTitle(driver, "New Tab");
+		driver.navigate().to(href);
 	}
 
 	public static void snapshot(TakesScreenshot drivername, String filename) {
@@ -167,9 +186,7 @@ public class Utility {
 	public static void waitElementPresenceByAttribute(WebDriver driver, int waitTime, String xpath, String attrubite,
 			String value) {
 		WebDriverWait wait = new WebDriverWait(driver, waitTime);
-		// System.out.println(driver.findElement(By.xpath(xpath)).getAttribute(attrubite));
 		wait.until(ExpectedConditions.attributeContains(driver.findElement(By.xpath(xpath)), attrubite, value));
-		// System.out.println(driver.findElement(By.xpath(xpath)).getAttribute(attrubite));
 	}
 
 	public static void waitURLnavigation(WebDriver driver, int waitTime, String partofURL) {
